@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
-
 :root {
     --ink: #171717;
     --muted: #777;
@@ -20,29 +18,26 @@ body {
     min-height: 100vh;
     background: var(--paper);
     color: var(--ink);
-    font-family: "Manrope", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+a {
+    color: inherit;
 }
 
 .page {
     width: min(1120px, calc(100% - 48px));
-    min-height: 100vh;
     margin: 0 auto;
     padding: 54px 0 34px;
-    display: flex;
-    flex-direction: column;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
 }
 
 .brand-mark {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: Baskerville, "Iowan Old Style", "Palatino Linotype",
+                 "Book Antiqua", Palatino, Georgia, serif;
     font-size: 64px;
     line-height: .7;
     font-weight: 600;
-    letter-spacing: -0.12em;
+    letter-spacing: -.12em;
     display: inline-block;
     transform: scaleX(.92);
     transform-origin: left center;
@@ -50,54 +45,75 @@ body {
 
 .hero {
     margin-top: clamp(100px, 15vh, 180px);
-    max-width: 980px;
+    max-width: 1020px;
 }
 
-.eyebrow {
-    margin: 0 0 24px;
+.eyebrow,
+.section-label {
+    margin: 0 0 22px;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: .22em;
     color: var(--muted);
 }
 
+h1,
+h2 {
+    font-family: Baskerville, "Iowan Old Style", "Palatino Linotype",
+                 "Book Antiqua", Palatino, Georgia, serif;
+}
+
 h1 {
     margin: 0;
-    font-family: "Cormorant Garamond", Georgia, serif;
     font-size: clamp(42px, 6.5vw, 88px);
     line-height: .9;
     font-weight: 500;
     letter-spacing: -.035em;
 }
 
-.details {
-    margin-top: clamp(100px, 15vh, 170px);
-    padding-top: 28px;
+h2 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1;
+    font-weight: 600;
+}
+
+.intro {
+    max-width: 560px;
+    margin: 34px 0 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.grid,
+.block {
+    margin-top: clamp(90px, 13vh, 150px);
+    padding-top: 30px;
     border-top: 1px solid var(--line);
+}
+
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
 }
 
-.contact h2 {
-    margin: 0 0 18px;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 32px;
-    line-height: 1;
-    font-weight: 600;
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .contact a,
-.contact p,
-.legal p {
-    margin: 6px 0;
+.contact p {
+    margin: 0 0 10px;
     font-size: 14px;
     line-height: 1.7;
+    text-decoration: none;
 }
 
 .contact a {
-    color: inherit;
-    text-decoration: none;
     border-bottom: 1px solid var(--line);
 }
 
@@ -105,17 +121,34 @@ h1 {
     border-color: var(--ink);
 }
 
-.legal {
-    color: #444;
+.facts {
+    margin: 46px 0 0;
 }
 
-.legal strong {
-    font-weight: 600;
+.facts > div {
+    display: grid;
+    grid-template-columns: minmax(180px, 32%) 1fr;
+    gap: 30px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.facts dt {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.facts dd {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
 }
 
 footer {
-    margin-top: auto;
-    padding-top: 100px;
+    margin-top: 120px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
     font-size: 9px;
     letter-spacing: .12em;
     color: #999;
@@ -140,13 +173,22 @@ footer {
         line-height: .92;
     }
 
-    .details {
+    .grid {
         grid-template-columns: 1fr;
-        gap: 42px;
-        margin-top: 100px;
+        gap: 34px;
+    }
+
+    .facts > div {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .grid,
+    .block {
+        margin-top: 90px;
     }
 
     footer {
-        padding-top: 70px;
+        margin-top: 80px;
     }
 }

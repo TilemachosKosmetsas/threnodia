@@ -1,9 +1,13 @@
 # threnodia.com
 
-Single-page static website.
+Minimal static website prepared around the corporate-transparency information
+required for an I.K.E. website under Article 47 of Law 4072/2012.
+
+No JavaScript, analytics, cookies, Google Fonts, or external assets are used.
 
 Files:
-- `index.html` — page content
-- `style.css` — design and responsive layout
+- index.html
+- style.css
 
-The page uses Google Fonts (Cormorant Garamond and Manrope) via CSS.
+Annual financial statements are not hosted on this website. They are subject
+to publication through G.E.MI. under the applicable corporate-law rules.
