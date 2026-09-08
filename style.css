@@ -3,9 +3,6 @@
     --muted: #777;
     --line: #dedbd6;
     --paper: #f7f6f3;
-    --panel: #efede8;
-    --button: #171717;
-    --button-text: #f7f6f3;
 }
 
 * {
@@ -61,8 +58,7 @@ a {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: Baskerville, "Iowan Old Style", "Palatino Linotype",
                  "Book Antiqua", Palatino, Georgia, serif;
 }
@@ -88,159 +84,6 @@ h2 {
     font-size: 15px;
     line-height: 1.8;
     color: #555;
-}
-
-/* Financial statements reveal button */
-.financial-disclosure {
-    margin-top: 42px;
-    max-width: 900px;
-}
-
-.financial-disclosure > summary {
-    list-style: none;
-}
-
-.financial-disclosure > summary::-webkit-details-marker {
-    display: none;
-}
-
-.financial-toggle {
-    width: fit-content;
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-    padding: 14px 18px;
-    border: 1px solid var(--ink);
-    border-radius: 999px;
-    background: transparent;
-    cursor: pointer;
-    user-select: none;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .08em;
-    transition: background .2s ease, color .2s ease;
-}
-
-.financial-toggle:hover,
-.financial-disclosure[open] .financial-toggle {
-    background: var(--ink);
-    color: var(--paper);
-}
-
-.toggle-symbol {
-    position: relative;
-    width: 14px;
-    height: 14px;
-    flex: 0 0 14px;
-}
-
-.toggle-symbol::before,
-.toggle-symbol::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 6px;
-    width: 14px;
-    height: 1px;
-    background: currentColor;
-}
-
-.toggle-symbol::after {
-    transform: rotate(90deg);
-    transition: transform .2s ease;
-}
-
-.financial-disclosure[open] .toggle-symbol::after {
-    transform: rotate(0deg);
-}
-
-.financial-panel {
-    margin-top: 28px;
-    padding: clamp(28px, 5vw, 54px);
-    background: var(--panel);
-    border: 1px solid var(--line);
-}
-
-.financial-panel-heading {
-    max-width: 700px;
-}
-
-.financial-intro {
-    max-width: 620px;
-    margin: 22px 0 0;
-    font-size: 14px;
-    line-height: 1.8;
-    color: #555;
-}
-
-.financial-document {
-    margin-top: 42px;
-    padding-top: 24px;
-    border-top: 1px solid #cbc7c0;
-    display: grid;
-    grid-template-columns: 90px 1fr auto;
-    gap: 28px;
-    align-items: center;
-}
-
-.document-year {
-    font-family: Baskerville, "Iowan Old Style", Georgia, serif;
-    font-size: 34px;
-    line-height: 1;
-}
-
-.document-info h3 {
-    margin: 0 0 5px;
-    font-size: 23px;
-    font-weight: 600;
-}
-
-.document-info p {
-    margin: 0 0 6px;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.document-info span {
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: .05em;
-}
-
-.document-actions {
-    display: flex;
-    gap: 9px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-.document-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 42px;
-    padding: 0 16px;
-    border: 1px solid var(--ink);
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .06em;
-    white-space: nowrap;
-    transition: opacity .2s ease;
-}
-
-.document-link:hover {
-    opacity: .68;
-}
-
-.document-link.primary {
-    background: var(--button);
-    color: var(--button-text);
-}
-
-.document-link.secondary {
-    background: transparent;
-    color: var(--ink);
 }
 
 .grid,
@@ -311,7 +154,7 @@ footer {
     color: #999;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 700px) {
     .page {
         width: min(100% - 36px, 1120px);
         padding-top: 34px;
@@ -328,15 +171,6 @@ footer {
     h1 {
         font-size: clamp(39px, 12vw, 68px);
         line-height: .92;
-    }
-
-    .financial-document {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .document-actions {
-        justify-content: flex-start;
     }
 
     .grid {
@@ -356,22 +190,5 @@ footer {
 
     footer {
         margin-top: 80px;
-    }
-}
-
-@media (max-width: 460px) {
-    .financial-toggle {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .document-actions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-    }
-
-    .document-link {
-        width: 100%;
     }
 }

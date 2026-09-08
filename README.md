@@ -1,35 +1,13 @@
-# threnodia.com — έκδοση με Οικονομικές Καταστάσεις
+# threnodia.com
 
-## Τι να ανεβάσετε στο GitHub
+Minimal static website prepared around the corporate-transparency information
+required for an I.K.E. website under Article 47 of Law 4072/2012.
 
-Στο root του repository ανεβάστε:
+No JavaScript, analytics, cookies, Google Fonts, or external assets are used.
 
-- `index.html`
-- `style.css`
-- το PDF σας, με ΟΝΟΜΑ ΑΚΡΙΒΩΣ:
-  `oikonomikes-katastaseis-2025.pdf`
+Files:
+- index.html
+- style.css
 
-Το PDF δεν περιλαμβάνεται σε αυτό το ZIP, όπως ζητήθηκε.
-
-## Πώς λειτουργεί
-
-Στην αρχική σελίδα εμφανίζεται κουμπί:
-`Οικονομικές Καταστάσεις`
-
-Με click ανοίγει η ενότητα με το έτος 2025 και δύο επιλογές:
-
-- `Προβολή` — ανοίγει το PDF σε νέο tab
-- `Λήψη PDF` — ζητά από τον browser να κατεβάσει το αρχείο
-
-Δεν χρησιμοποιείται JavaScript.
-
-## Προσθήκη επόμενου έτους
-
-Στο `index.html`, βρείτε το `<article class="financial-document"> ... </article>`.
-Αντιγράψτε το και αλλάξτε:
-
-- `2025` σε `2026`
-- την περίοδο χρήσης
-- το filename, π.χ. `oikonomikes-katastaseis-2026.pdf`
-
-Έπειτα ανεβάστε και το νέο PDF στο ίδιο repository.
+Annual financial statements are not hosted on this website. They are subject
+to publication through G.E.MI. under the applicable corporate-law rules.
